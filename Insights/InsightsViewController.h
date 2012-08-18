@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InsightsViewController : UIViewController
+@interface InsightsViewController : UIViewController <UITextViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextView *insight;
+
+- (IBAction)clearInsight:(id)sender;
+- (IBAction)clickBackground:(id)sender;
+- (IBAction)clickDoneInsight:(id)sender;
 
 @end

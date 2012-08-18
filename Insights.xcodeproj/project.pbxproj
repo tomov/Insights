@@ -37,20 +37,20 @@
 		0E0EE55315E01A2E004D806B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0E0EE55515E01A2E004D806B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0E0EE55715E01A2E004D806B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0E0EE55B15E01A2E004D806B /* Insights-Info.plist */ = {isa = PBXFileReference; path = "Insights-Info.plist"; sourceTree = "<group>"; };
+		0E0EE55B15E01A2E004D806B /* Insights-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Insights-Info.plist"; sourceTree = "<group>"; };
 		0E0EE55D15E01A2E004D806B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0E0EE55F15E01A2E004D806B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0E0EE56115E01A2E004D806B /* Insights-Prefix.pch */ = {isa = PBXFileReference; path = "Insights-Prefix.pch"; sourceTree = "<group>"; };
-		0E0EE56215E01A2E004D806B /* InsightsAppDelegate.h */ = {isa = PBXFileReference; path = InsightsAppDelegate.h; sourceTree = "<group>"; };
+		0E0EE56115E01A2E004D806B /* Insights-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Insights-Prefix.pch"; sourceTree = "<group>"; };
+		0E0EE56215E01A2E004D806B /* InsightsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsightsAppDelegate.h; sourceTree = "<group>"; };
 		0E0EE56315E01A2E004D806B /* InsightsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsightsAppDelegate.m; sourceTree = "<group>"; };
 		0E0EE56615E01A2E004D806B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		0E0EE56815E01A2E004D806B /* InsightsViewController.h */ = {isa = PBXFileReference; path = InsightsViewController.h; sourceTree = "<group>"; };
+		0E0EE56815E01A2E004D806B /* InsightsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsightsViewController.h; sourceTree = "<group>"; };
 		0E0EE56915E01A2E004D806B /* InsightsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsightsViewController.m; sourceTree = "<group>"; };
 		0E0EE57015E01A2E004D806B /* InsightsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InsightsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0EE57115E01A2E004D806B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		0E0EE57915E01A2E004D806B /* InsightsTests-Info.plist */ = {isa = PBXFileReference; path = "InsightsTests-Info.plist"; sourceTree = "<group>"; };
+		0E0EE57915E01A2E004D806B /* InsightsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InsightsTests-Info.plist"; sourceTree = "<group>"; };
 		0E0EE57B15E01A2E004D806B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0E0EE57D15E01A2E004D806B /* InsightsTests.h */ = {isa = PBXFileReference; path = InsightsTests.h; sourceTree = "<group>"; };
+		0E0EE57D15E01A2E004D806B /* InsightsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InsightsTests.h; sourceTree = "<group>"; };
 		0E0EE57E15E01A2E004D806B /* InsightsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InsightsTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
