@@ -1,5 +1,5 @@
 import os
-from flask import Flask;
+from flask import Flask, render_template
 
 #-----------------------------
 # initialization
@@ -11,6 +11,8 @@ app.config.update(
     DEBUG = True
 )
 
+app.config["SECRET_KEY"] = ";#A1\xb3\xed\xfbY\xa4\x01\x99/[]\xfd#\x90\x8c\xc3\x8bla\x10\x9f";
+
 #-----------------------------
 # functions
 #-----------------------------
@@ -21,7 +23,7 @@ app.config.update(
 
 @app.route("/")
 def hello():
-    return "Hello from Python!"
+    return render_template("index.html")
 
 #-----------------------------
 # launch
