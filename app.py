@@ -47,6 +47,12 @@ def get_insights():
         insights[i]['modified'] = ""
     return json.dumps(insights)
 
+@app.route("/edges", methods=['get'])
+def get_edges():
+    conn = utils.get_db_conn()
+    edges = conn.query("select * from insights_insights")
+    return json.dumps(edges)
+
 @app.route('/addinsight', methods=['post'])
 def add_insight():
     conn = utils.get_db_conn()
@@ -58,6 +64,18 @@ def add_insight():
     query = 'insert into insights (`text`) values(\'' + data + '\')';
     print query
     conn.query(query)
+    return "success"
+
+@app.route('/addedge', methods=['post'])
+def add_edge():
+    conn = utils.get_db_conn()
+    a_id = json.loads(request.values.get('a_id'))
+    b_id = json.loads(request.values.get('b_id'))
+    
+    print "hahaha"
+    print a_id, b_id
+    conn.query('insert into insights_insights (`insight_a_id`, `insight_b_id`) values (\'' + a_id +'\', \'' + b_id + '\')');
+    return "success"
 
 #-----------------------------
 # launch
