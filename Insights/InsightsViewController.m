@@ -37,6 +37,30 @@
     return YES;
 }
 
+- (IBAction)saveInsight:(id)sender {
+    // Create the request.
+    NSMutableURLRequest *theRequest=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:5000/addinsight"]
+                                              cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                          timeoutInterval:60.0];
+    NSString *postString = insight.text;
+    NSData *theFuckedUpBodyData = [postString dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+    [theRequest setHTTPMethod: @"POST"];
+    [theRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [theRequest setValue:[NSString stringWithFormat:@"%d", [theFuckedUpBodyData length]] forHTTPHeaderField:@"Content-Length"];
+    [theRequest setHTTPBody:theFuckedUpBodyData];
+    
+    // create the connection with the request
+    // and start loading the data
+    NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+    if (theConnection) {
+        // Create the NSMutableData to hold the received data.
+        // receivedData is an instance variable declared elsewhere.
+        NSData *receivedData = [NSMutableData data];
+    } else {
+        // Inform the user that the connection failed.
+    }
+}
+
 #pragma mark - Xcode default shits
 
 - (void)didReceiveMemoryWarning

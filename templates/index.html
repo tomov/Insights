@@ -1,8 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
+
+<br /><br /><br />
+
+<div align="center" style="font-size:70px;">My Insights:</div>
+
+<br /><br /><br />
+
+<div class="insights-container">
+
+    <div class="hero-unit" style="display:none" id="empty_insight">
+        <a class="insight-delete" href="#"><i class="icon-remove"></i></a>
+        <div class="insight-text"></div>
+        <div class="insight-tags"></div>
+    </div>
+
+</div>
+
+<!-- default shits -->
 {% if not session.logged_in %}
      <p>You are logged in.</p>
 {% else %}
      <p>You are not logged in.</p>
 {% endif %}
+
 {% endblock %}

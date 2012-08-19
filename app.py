@@ -1,5 +1,14 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import _mysql
+
+import database
+import utils
+
+try:
+    import simplejson as json
+except ImportError as e:
+    import json
 
 #-----------------------------
 # initialization
@@ -24,6 +33,31 @@ app.config["SECRET_KEY"] = ";#A1\xb3\xed\xfbY\xa4\x01\x99/[]\xfd#\x90\x8c\xc3\x8
 @app.route("/")
 def hello():
     return render_template("index.html")
+
+#-----------------------------
+# API methods
+#-----------------------------
+
+@app.route("/insights", methods=['get'])
+def get_insights():
+    conn = utils.get_db_conn()
+    insights = conn.query("select * from insights")
+    for i in range(len(insights)):
+        insights[i]['created'] = ""
+        insights[i]['modified'] = ""
+    return json.dumps(insights)
+
+@app.route('/addinsight', methods=['post'])
+def add_insight():
+    conn = utils.get_db_conn()
+
+    data = request.data
+    if not data:
+        data = request.form.keys()[0]
+
+    query = 'insert into insights (`text`) values(\'' + data + '\')';
+    print query
+    conn.query(query)
 
 #-----------------------------
 # launch
